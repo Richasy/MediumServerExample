@@ -1,0 +1,33 @@
+﻿<ContentDialog
+    x:Class="MediumServerExample.Dialog.NewImageDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MediumServerExample.Dialog"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Upload Image"
+    PrimaryButtonText="Upload"
+    SecondaryButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+
+    <StackPanel>
+        <StackPanel>
+            <TextBlock Text="Image Path" FontSize="13" Foreground="Gray" Margin="0,0,0,5"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Name="PathTextBox" HorizontalAlignment="Stretch" IsReadOnly="True" VerticalAlignment="Center"/>
+                <Button Content="···" VerticalAlignment="Center" Grid.Column="2" Name="GetImageButton" Click="GetImageButton_Click"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel Margin="0,10,0,0">
+            <TextBlock Text="Image Name" FontSize="13" Foreground="Gray" Margin="0,0,0,5"/>
+            <TextBox Name="NameBox" HorizontalAlignment="Stretch"/>
+        </StackPanel>
+    </StackPanel>
+</ContentDialog>
